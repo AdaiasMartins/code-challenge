@@ -1,0 +1,52 @@
+[2025-01-30T00:47:48.111+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: embulk_pipeline_csv.load_csv_to_csv manual__2025-01-30T00:47:44.312924+00:00 [queued]>
+[2025-01-30T00:47:48.121+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: embulk_pipeline_csv.load_csv_to_csv manual__2025-01-30T00:47:44.312924+00:00 [queued]>
+[2025-01-30T00:47:48.122+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-30T00:47:48.122+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2025-01-30T00:47:48.123+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-30T00:47:48.137+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): load_csv_to_csv> on 2025-01-30 00:47:44.312924+00:00
+[2025-01-30T00:47:48.143+0000] {standard_task_runner.py:55} INFO - Started process 85 to run task
+[2025-01-30T00:47:48.146+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'embulk_pipeline_csv', 'load_csv_to_csv', 'manual__2025-01-30T00:47:44.312924+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_csv_dag.py', '--cfg-path', '/tmp/tmpnv6imyvd']
+[2025-01-30T00:47:48.147+0000] {standard_task_runner.py:83} INFO - Job 21: Subtask load_csv_to_csv
+[2025-01-30T00:47:48.273+0000] {task_command.py:376} INFO - Running <TaskInstance: embulk_pipeline_csv.load_csv_to_csv manual__2025-01-30T00:47:44.312924+00:00 [running]> on host 994f36fe794c
+[2025-01-30T00:47:48.402+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=embulk_pipeline_csv
+AIRFLOW_CTX_TASK_ID=load_csv_to_csv
+AIRFLOW_CTX_EXECUTION_DATE=2025-01-30T00:47:44.312924+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-01-30T00:47:44.312924+00:00
+[2025-01-30T00:47:48.403+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-01-30T00:47:48.405+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'java -jar /opt/embulk/embulk-0.9.25.jar run /opt/***/dags/config_load_csv.yml']
+[2025-01-30T00:47:48.417+0000] {subprocess.py:86} INFO - Output:
+[2025-01-30T00:47:48.727+0000] {subprocess.py:93} INFO - 2025-01-30 00:47:48.726 +0000: Embulk v0.9.25
+[2025-01-30T00:47:49.178+0000] {subprocess.py:93} INFO - Exception in thread "main" java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+[2025-01-30T00:47:49.179+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.ConfigurationImpl.parseValidationXml(ConfigurationImpl.java:268)
+[2025-01-30T00:47:49.179+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.ConfigurationImpl.prepare(ConfigurationImpl.java:258)
+[2025-01-30T00:47:49.180+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.ConfigurationImpl.doPrivBuildValidatorFactory(ConfigurationImpl.java:248)
+[2025-01-30T00:47:49.180+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.util.SecureActions$5.run(SecureActions.java:131)
+[2025-01-30T00:47:49.180+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.util.SecureActions$5.run(SecureActions.java:129)
+[2025-01-30T00:47:49.181+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.ConfigurationImpl.run(ConfigurationImpl.java:337)
+[2025-01-30T00:47:49.181+0000] {subprocess.py:93} INFO - 	at org.apache.bval.jsr303.ConfigurationImpl.buildValidatorFactory(ConfigurationImpl.java:244)
+[2025-01-30T00:47:49.181+0000] {subprocess.py:93} INFO - 	at org.embulk.config.ModelManager.<init>(ModelManager.java:24)
+[2025-01-30T00:47:49.181+0000] {subprocess.py:93} INFO - 	at org.embulk.EmbulkEmbed$Bootstrap.<init>(EmbulkEmbed.java:52)
+[2025-01-30T00:47:49.182+0000] {subprocess.py:93} INFO - 	at org.embulk.cli.EmbulkRun.runSubcommand(EmbulkRun.java:409)
+[2025-01-30T00:47:49.182+0000] {subprocess.py:93} INFO - 	at org.embulk.cli.EmbulkRun.run(EmbulkRun.java:90)
+[2025-01-30T00:47:49.182+0000] {subprocess.py:93} INFO - 	at org.embulk.cli.Main.main(Main.java:64)
+[2025-01-30T00:47:49.182+0000] {subprocess.py:93} INFO - Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+[2025-01-30T00:47:49.183+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+[2025-01-30T00:47:49.183+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+[2025-01-30T00:47:49.183+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+[2025-01-30T00:47:49.184+0000] {subprocess.py:93} INFO - 	... 12 more
+[2025-01-30T00:47:49.188+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-01-30T00:47:49.216+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-01-30T00:47:49.219+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=embulk_pipeline_csv, task_id=load_csv_to_csv, execution_date=20250130T004744, start_date=20250130T004748, end_date=20250130T004749
+[2025-01-30T00:47:49.244+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 21 for task load_csv_to_csv (Bash command failed. The command returned a non-zero exit code 1.; 85)
+[2025-01-30T00:47:49.281+0000] {local_task_job.py:164} INFO - Task exited with return code 1
+[2025-01-30T00:47:49.337+0000] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

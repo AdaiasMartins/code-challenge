@@ -1,0 +1,21 @@
+in:
+  type: file
+  path_prefix: "/opt/airflow/data/order_details.csv"
+  parser:
+    type: csv
+    delimiter: ","
+    columns:
+      - {name: order_id, type: long}
+      - {name: product_id, type: long}
+      - {name: quantity, type: long}
+      - {name: unit_price, type: double}
+      - {name: discount, type: double}
+
+out:
+  type: file
+  path_prefix: "/opt/airflow/data/csv/{current_date}/order_details"
+  file_ext: ".csv"
+  formatter:
+    type: csv
+    delimiter: ","
+    header_line: true

@@ -1,0 +1,17 @@
+in:
+  type: postgresql
+  host: "postgres"
+  user: "airflow"
+  password: "airflow"
+  database: "northwind"
+  table: "orders" 
+  select: "SELECT order_id, customer_id, order_date FROM orders"
+
+out:
+  type: file
+  path_prefix: "/opt/airflow/data/postgres/orders/{current_date}/orders"
+  file_ext: ".csv"
+  formatter:
+    type: csv
+    delimiter: ","
+    header_line: true

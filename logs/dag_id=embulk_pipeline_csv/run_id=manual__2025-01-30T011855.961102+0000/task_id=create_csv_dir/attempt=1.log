@@ -1,0 +1,27 @@
+[2025-01-30T01:18:56.657+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: embulk_pipeline_csv.create_csv_dir manual__2025-01-30T01:18:55.961102+00:00 [queued]>
+[2025-01-30T01:18:56.668+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: embulk_pipeline_csv.create_csv_dir manual__2025-01-30T01:18:55.961102+00:00 [queued]>
+[2025-01-30T01:18:56.669+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-30T01:18:56.669+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2025-01-30T01:18:56.669+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2025-01-30T01:18:56.684+0000] {taskinstance.py:1383} INFO - Executing <Task(BashOperator): create_csv_dir> on 2025-01-30 01:18:55.961102+00:00
+[2025-01-30T01:18:56.691+0000] {standard_task_runner.py:55} INFO - Started process 278 to run task
+[2025-01-30T01:18:56.694+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'embulk_pipeline_csv', 'create_csv_dir', 'manual__2025-01-30T01:18:55.961102+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/pipeline_csv_dag.py', '--cfg-path', '/tmp/tmpymkp3ext']
+[2025-01-30T01:18:56.695+0000] {standard_task_runner.py:83} INFO - Job 32: Subtask create_csv_dir
+[2025-01-30T01:18:56.817+0000] {task_command.py:376} INFO - Running <TaskInstance: embulk_pipeline_csv.create_csv_dir manual__2025-01-30T01:18:55.961102+00:00 [running]> on host b4b714f8e5a8
+[2025-01-30T01:18:56.952+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=embulk_pipeline_csv
+AIRFLOW_CTX_TASK_ID=create_csv_dir
+AIRFLOW_CTX_EXECUTION_DATE=2025-01-30T01:18:55.961102+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-01-30T01:18:55.961102+00:00
+[2025-01-30T01:18:56.954+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2025-01-30T01:18:56.954+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'mkdir -p /opt/***/data/csv/2025-01-30']
+[2025-01-30T01:18:56.970+0000] {subprocess.py:86} INFO - Output:
+[2025-01-30T01:18:56.974+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-01-30T01:18:57.039+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=embulk_pipeline_csv, task_id=create_csv_dir, execution_date=20250130T011855, start_date=20250130T011856, end_date=20250130T011857
+[2025-01-30T01:18:57.066+0000] {local_task_job.py:164} INFO - Task exited with return code 0
+[2025-01-30T01:18:57.116+0000] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
